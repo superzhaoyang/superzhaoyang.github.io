@@ -229,6 +229,142 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/堆——神奇的优先队列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/10/堆——神奇的优先队列/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-10T17:37:29+08:00">
+                2019-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="堆——神奇的优先队列"><a href="#堆——神奇的优先队列" class="headerlink" title="堆——神奇的优先队列"></a><strong>堆——神奇的优先队列</strong></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建堆以及堆排序</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> h[<span class="number">101</span>];<span class="comment">//存放堆的数组</span></span><br><span class="line"><span class="keyword">int</span> n;<span class="comment">//用来存储堆中元素的个数，也就是堆的大小</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	t = h[x];</span><br><span class="line">	h[x] = h[y];</span><br><span class="line">	h[y] = t;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//向下调整函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">siftdown</span><span class="params">(<span class="keyword">int</span> i)</span><span class="comment">//从1开始，向下调整</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t, flag = <span class="number">0</span>;<span class="comment">//flag用来标记是否需要继续向下调整</span></span><br><span class="line">	<span class="comment">//当i节点有儿子的时候才向下执行</span></span><br><span class="line">	<span class="keyword">while</span> (i * <span class="number">2</span> &lt;= n &amp;&amp; flag == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="comment">//首先判断它与左儿子的关系，用t记录值比较小的节点的编号</span></span><br><span class="line">		<span class="keyword">if</span> (h[i] &gt; h[i * <span class="number">2</span>])</span><br><span class="line">			t = i * <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			t = i;</span><br><span class="line">		<span class="comment">//再判断它与右儿子的关系，用t记录值比较小的节点的编号</span></span><br><span class="line">		<span class="keyword">if</span> (i * <span class="number">2</span> + <span class="number">1</span> &lt;= n) &#123;</span><br><span class="line">			<span class="comment">//如果右儿子更小，更新较小的节点编号</span></span><br><span class="line">			<span class="keyword">if</span> (h[t] &gt; h[i * <span class="number">2</span>+<span class="number">1</span>]  )</span><br><span class="line">				t = i * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//如法发现最小的节点编号不是自己，说明有比父节点更小的</span></span><br><span class="line">		<span class="keyword">if</span> (t != i) &#123;</span><br><span class="line">			swap(i, t);<span class="comment">//交换值</span></span><br><span class="line">			i = t;<span class="comment">//更新i为刚才与它交换的儿子节点的编号，便于继续进行调整</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是用堆排序的方法所用到的调整函数，目的在于建立最大堆</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">siftdown1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t, flag = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (i * <span class="number">2</span> &lt;= n &amp;&amp; flag == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (h[i] &lt; h[i * <span class="number">2</span>])</span><br><span class="line">			t = i * <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			t = i;</span><br><span class="line">		<span class="keyword">if</span> (i * <span class="number">2</span> + <span class="number">1</span> &lt;= n) &#123;</span><br><span class="line">			<span class="keyword">if</span> (h[t] &lt; h[i * <span class="number">2</span> + <span class="number">1</span>])</span><br><span class="line">				t = i * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (t != i) &#123;</span><br><span class="line">			swap(i, t);</span><br><span class="line">			i = t;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//堆排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapsort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (n &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		swap(<span class="number">1</span>, n);</span><br><span class="line">		n--;</span><br><span class="line">		siftdown1(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//建立堆的函数</span></span><br><span class="line"><span class="comment">//从最后一个非叶节点到第一个节点依次进行向下调整</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = n / <span class="number">2</span>; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">		siftdown(i);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//堆排序方法的建立最大堆</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">creat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = n / <span class="number">2</span>; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">		siftdown1(i);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//删除最大的元素</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deletemax</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	t = h[<span class="number">1</span>];<span class="comment">//临时变量记录定点值</span></span><br><span class="line">	h[<span class="number">1</span>] = h[n];<span class="comment">//将堆的最后一个点赋值到堆顶</span></span><br><span class="line">	n--;<span class="comment">//堆的元素个数减少一</span></span><br><span class="line">	siftdown(<span class="number">1</span>);<span class="comment">//向下调整</span></span><br><span class="line">	<span class="keyword">return</span> t;<span class="comment">//返回之前记录的定点最小值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, num;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= num; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;h[i]);</span><br><span class="line">	n = num;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	create();<span class="comment">//建堆</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//连续删除n次顶部元素，也就是从小到大把数输出来</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= num; i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, deletemax());</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= num; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;h[i]);</span><br><span class="line">	n = num;</span><br><span class="line">	creat();</span><br><span class="line">	heapsort();<span class="comment">//堆排序</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= num; i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, h[i]);</span><br><span class="line">	getchar();</span><br><span class="line">	getchar();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下：</p>
+<p><img src="https://s2.ax1x.com/2019/09/09/ntEkxs.jpg" alt></p>
+<p>咳咳，运行结果被我搞没了，总而言之是按照升序排列就对了。</p>
+<p>最后贴上我的良师益友的照片来镇楼。</p>
+<p><img src="https://s2.ax1x.com/2019/09/09/ntnDbR.jpg" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/堆————神奇的优先队列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,7 +534,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
