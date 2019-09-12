@@ -236,6 +236,142 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="superzhaoyang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/09/10/naEP1g.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="superzhaoyang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/12/擒贼先擒王——并查集/" itemprop="url">擒贼先擒王——并查集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-12T20:17:50+08:00">
+                2019-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>今天复习了一下堆的两种排序方法，又学习了一下并查集。</strong></p>
+<p><strong>下附上问题描述和代码</strong></p>
+<p><img src="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg" alt></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;, n, m, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		f[i] = i;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//找爹且擒贼先擒王</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getf</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (f[v] == v)</span><br><span class="line">		<span class="keyword">return</span> v;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">//路径压缩，每次函数返回的时候，顺带把路上遇到的人的"BOSS"改为最后找到的祖宗编号；</span></span><br><span class="line">		<span class="comment">//提高找祖先的速度。</span></span><br><span class="line">		f[v] = getf(f[v]);</span><br><span class="line">		<span class="keyword">return</span> f[v];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//合并两子集合的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t1, t2;</span><br><span class="line">	t1 = getf(v);<span class="comment">//t1,t2分别为v和u的最大BOSS</span></span><br><span class="line">	t2 = getf(u);</span><br><span class="line">	<span class="keyword">if</span> (t1 != t2)</span><br><span class="line">		f[t2] = t1;<span class="comment">//靠左原则</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, x, y;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n, &amp;m);<span class="comment">//n是有多少个犯罪个体，m是由多少条描述</span></span><br><span class="line">	init();<span class="comment">//初始化</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;x, &amp;y);</span><br><span class="line">		merge(x, y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//扫描有多少个独立的犯罪团伙</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">if</span> (f[i] == i)</span><br><span class="line">			sum++;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终返回的是有多少个独立团伙。</p>
+<p>运行结果：</p>
+<p><img src="https://s2.ax1x.com/2019/09/12/nBbwZD.png" alt></p>
+<p>最后结果是3.</p>
+<p>附上今日份的山大月饼，馋你们。<img src="https://s2.ax1x.com/2019/09/12/nBqMlt.jpg" alt></p>
+<p><img src="https://s2.ax1x.com/2019/09/12/nBbIij.jpg" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/数据结构实验一——顺序表的相关操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -532,7 +668,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
