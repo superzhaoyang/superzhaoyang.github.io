@@ -4,9 +4,9 @@ const ap = new APlayer({
     autoplay: false,
     audio: [
       {
-        name: "蜂鸟",
+        name: "太空",
         artist: '吴青峰',
-        url: 'http://m10.music.126.net/20190911231410/2ea08a8a9291e761eead904923f1099e/ymusic/0f0b/0609/015c/8a6a8ac59c1ce4f63e75668f4c3a16ca.mp3',
+        url: '/1.mp3',
         cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
       },
       {
