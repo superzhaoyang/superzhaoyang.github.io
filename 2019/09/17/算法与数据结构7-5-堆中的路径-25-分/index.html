@@ -89,22 +89,17 @@
 
 
 
-<meta name="description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
+<meta name="description" content="将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。 输入格式:每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。 输出格式:对输入中给出的每个下标i，在一行中输出从H[i]到根结点的路径上的数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="擒贼先擒王——并查集">
-<meta property="og:url" content="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/index.html">
+<meta property="og:title" content="算法与数据结构7-5 堆中的路径 (25 分)">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/算法与数据结构7-5-堆中的路径-25-分/index.html">
 <meta property="og:site_name" content="superzhaoyang">
-<meta property="og:description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
+<meta property="og:description" content="将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。 输入格式:每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。 输出格式:对输入中给出的每个下标i，在一行中输出从H[i]到根结点的路径上的数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBbwZD.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBqMlt.jpg">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBbIij.jpg">
-<meta property="og:updated_time" content="2019-09-12T12:30:32.639Z">
+<meta property="og:updated_time" content="2019-09-17T11:29:16.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="擒贼先擒王——并查集">
-<meta name="twitter:description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg">
+<meta name="twitter:title" content="算法与数据结构7-5 堆中的路径 (25 分)">
+<meta name="twitter:description" content="将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。 输入格式:每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。 输出格式:对输入中给出的每个下标i，在一行中输出从H[i]到根结点的路径上的数">
 
 
 
@@ -134,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/17/算法与数据结构7-5-堆中的路径-25-分/">
 
 
 
 
 
-  <title>擒贼先擒王——并查集 | superzhaoyang</title>
+  <title>算法与数据结构7-5 堆中的路径 (25 分) | superzhaoyang</title>
   
 
 
@@ -253,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/算法与数据结构7-5-堆中的路径-25-分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="superzhaoyang">
@@ -270,7 +265,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">擒贼先擒王——并查集</h1>
+          <h1 class="post-title" itemprop="name headline">算法与数据结构7-5 堆中的路径 (25 分)</h1>
         
 
         <div class="post-meta">
@@ -282,8 +277,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-12T20:17:50+08:00">
-                2019-09-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-17T19:27:21+08:00">
+                2019-09-17
               </time>
             
 
@@ -320,23 +315,21 @@
       
 
       
-        <p><strong>今天复习了一下堆的两种排序方法，又学习了一下并查集。</strong></p>
-<p><strong>下附上问题描述和代码</strong></p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg" alt></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;, n, m, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		f[i] = i;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>将一系列给定数字插入一个初始为空的小顶堆<code>H[]</code>。随后对任意给定的下标<code>i</code>，打印从<code>H[i]</code>到根结点的路径。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每组测试第1行包含2个正整数<em>N</em>和<em>M</em>(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的<em>N</em>个要被插入一个初始为空的小顶堆的整数。最后一行给出<em>M</em>个下标。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对输入中给出的每个下标<code>i</code>，在一行中输出从<code>H[i]</code>到根结点的路径上的数据。数字间以1个空格分隔，行末不得有多余空格。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">46 23 26 24 10</span><br><span class="line">5 4 3</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//找爹且擒贼先擒王</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getf</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (f[v] == v)</span><br><span class="line">		<span class="keyword">return</span> v;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">//路径压缩，每次函数返回的时候，顺带把路上遇到的人的"BOSS"改为最后找到的祖宗编号；</span></span><br><span class="line">		<span class="comment">//提高找祖先的速度。</span></span><br><span class="line">		f[v] = getf(f[v]);</span><br><span class="line">		<span class="keyword">return</span> f[v];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//合并两子集合的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t1, t2;</span><br><span class="line">	t1 = getf(v);<span class="comment">//t1,t2分别为v和u的最大BOSS</span></span><br><span class="line">	t2 = getf(u);</span><br><span class="line">	<span class="keyword">if</span> (t1 != t2)</span><br><span class="line">		f[t2] = t1;<span class="comment">//靠左原则</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, x, y;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n, &amp;m);<span class="comment">//n是有多少个犯罪个体，m是由多少条描述</span></span><br><span class="line">	init();<span class="comment">//初始化</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;x, &amp;y);</span><br><span class="line">		merge(x, y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//扫描有多少个独立的犯罪团伙</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">if</span> (f[i] == i)</span><br><span class="line">			sum++;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">24 23 10</span><br><span class="line">46 23 10</span><br><span class="line">26 10</span><br></pre></td></tr></table></figure>
 
-<p>最终返回的是有多少个独立团伙。</p>
-<p>运行结果：</p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBbwZD.png" alt></p>
-<p>最后结果是3.</p>
-<p>附上今日份的山大月饼，馋你们。<img src="https://s2.ax1x.com/2019/09/12/nBqMlt.jpg" alt></p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBbIij.jpg" alt></p>
+<p>用了啊哈算法上的代码通不过，还得另行他法。</p>
+<p>下附AC代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span> + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> h[maxn];</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> Size = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	Size++;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = Size; x &lt; h[i / <span class="number">2</span>]; i /= <span class="number">2</span>) &#123;</span><br><span class="line">		h[i] = h[i / <span class="number">2</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	h[i] = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	h[<span class="number">0</span>] = <span class="number">-100001</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> t;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">		insert(t);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (m--) &#123;</span><br><span class="line">		<span class="keyword">int</span> t; </span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">		<span class="keyword">for</span> (i = t; i &gt;= <span class="number">1</span>; i /= <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i == t) <span class="built_in">cout</span> &lt;&lt; h[i];</span><br><span class="line">			<span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt;<span class="string">" "</span>&lt;&lt; h[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -374,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/10/数据结构实验一——顺序表的相关操作/" rel="next" title="数据结构实验一——顺序表的相关操作">
-                <i class="fa fa-chevron-left"></i> 数据结构实验一——顺序表的相关操作
+              <a href="/2019/09/16/栈和队列的综合应用——纸牌游戏/" rel="next" title="栈和队列的综合应用——纸牌游戏">
+                <i class="fa fa-chevron-left"></i> 栈和队列的综合应用——纸牌游戏
               </a>
             
           </div>
@@ -383,10 +376,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/13/算法与数据结构7-1-最大子列和问题-20-分/" rel="prev" title="算法与数据结构7-1 最大子列和问题 (20 分)">
-                算法与数据结构7-1 最大子列和问题 (20 分) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -438,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -499,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入格式"><span class="nav-number">1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入样例"><span class="nav-number">3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出样例"><span class="nav-number">4.</span> <span class="nav-text">输出样例:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
