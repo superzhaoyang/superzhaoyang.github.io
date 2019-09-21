@@ -99,7 +99,8 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/10/nURCtJ.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/09/ntEkxs.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/18/nHNoW9.jpg">
-<meta property="og:updated_time" content="2019-09-18T12:23:21.941Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/18/nHaL5D.png">
+<meta property="og:updated_time" content="2019-09-18T12:35:41.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构实验一——顺序表的相关操作">
 <meta name="twitter:description" content="1234567891011121314#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;stdlib.h&amp;gt;#include&amp;lt;set&amp;gt;using namespace std;struct ListNode &amp;#123;	int data;	ListNode *Next;&amp;#125;;typedef ListNo">
@@ -353,6 +354,8 @@
 
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintList</span><span class="params">(List L)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"原集合的元素为："</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= L-&gt;Last; i++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; L-&gt;Data[i] &lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"集合去重后剩余元素个数："</span>);</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it : s1) cnt++;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; cnt&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"集合去重后剩余元素："</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it : s1)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; it &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintList2</span><span class="params">(List L)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"原集合的元素为："</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= L-&gt;Last; i++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; L-&gt;Data[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"集合去重后剩余元素个数："</span>);</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it : s2) cnt++;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; cnt &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"集合去重后剩余元素："</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> it : s2)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; it &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>下附运行结果：</p>
+<p><img src="https://s2.ax1x.com/2019/09/18/nHaL5D.png" alt></p>
 
       
     </div>
@@ -472,7 +475,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
