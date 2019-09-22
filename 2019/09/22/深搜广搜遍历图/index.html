@@ -89,22 +89,20 @@
 
 
 
-<meta name="description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
+<meta name="description" content="今天学习了一下如何用深搜和广搜遍历图。 下面是广度优先搜索 12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;//广度优先搜索    int i,j,n,m,a,b,cur,book[101] =">
 <meta property="og:type" content="article">
-<meta property="og:title" content="擒贼先擒王——并查集">
-<meta property="og:url" content="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/index.html">
+<meta property="og:title" content="深搜广搜遍历图">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/深搜广搜遍历图/index.html">
 <meta property="og:site_name" content="superzhaoyang">
-<meta property="og:description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
+<meta property="og:description" content="今天学习了一下如何用深搜和广搜遍历图。 下面是广度优先搜索 12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;//广度优先搜索    int i,j,n,m,a,b,cur,book[101] =">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBbwZD.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBqMlt.jpg">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBbIij.jpg">
-<meta property="og:updated_time" content="2019-09-12T12:30:32.639Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/22/u9MxRU.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/22/u9MTMQ.png">
+<meta property="og:updated_time" content="2019-09-22T10:13:40.111Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="擒贼先擒王——并查集">
-<meta name="twitter:description" content="今天复习了一下堆的两种排序方法，又学习了一下并查集。 下附上问题描述和代码  1234567891011#include&amp;lt;iostream&amp;gt;using namespace std;int f[1001] = &amp;#123; 0 &amp;#125;, n, m, sum = 0;//初始化函数void init() &amp;#123;	int i;	for (i = 1; i &amp;lt;= n; i++">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg">
+<meta name="twitter:title" content="深搜广搜遍历图">
+<meta name="twitter:description" content="今天学习了一下如何用深搜和广搜遍历图。 下面是广度优先搜索 12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;//广度优先搜索    int i,j,n,m,a,b,cur,book[101] =">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/22/u9MxRU.png">
 
 
 
@@ -134,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/22/深搜广搜遍历图/">
 
 
 
 
 
-  <title>擒贼先擒王——并查集 | superzhaoyang</title>
+  <title>深搜广搜遍历图 | superzhaoyang</title>
   
 
 
@@ -253,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/12/擒贼先擒王——并查集/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/深搜广搜遍历图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="superzhaoyang">
@@ -270,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">擒贼先擒王——并查集</h1>
+          <h1 class="post-title" itemprop="name headline">深搜广搜遍历图</h1>
         
 
         <div class="post-meta">
@@ -282,8 +280,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-12T20:17:50+08:00">
-                2019-09-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-22T18:06:31+08:00">
+                2019-09-22
               </time>
             
 
@@ -320,23 +318,17 @@
       
 
       
-        <p><strong>今天复习了一下堆的两种排序方法，又学习了一下并查集。</strong></p>
-<p><strong>下附上问题描述和代码</strong></p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBb4oQ.jpg" alt></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;, n, m, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		f[i] = i;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>今天学习了一下如何用深搜和广搜遍历图。</p>
+<p>下面是广度优先搜索</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;<span class="comment">//广度优先搜索</span></span><br><span class="line">    <span class="keyword">int</span> i,j,n,m,a,b,cur,book[<span class="number">101</span>] = &#123;<span class="number">0</span>&#125;,e[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line">    <span class="keyword">int</span> que[<span class="number">10001</span>],head,tail;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">1</span>;j &lt;= n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i == j) e[i][j] = <span class="number">0</span>;<span class="comment">//对角线赋值为0</span></span><br><span class="line">            <span class="keyword">else</span> e[i][j] = <span class="number">9999999</span>;<span class="comment">//定义9999999为∞</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= m;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">        e[a][b] = <span class="number">1</span>;</span><br><span class="line">        e[b][a] = <span class="number">1</span>;<span class="comment">//无向图双向赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">    head = <span class="number">1</span>;</span><br><span class="line">    tail = <span class="number">1</span>;</span><br><span class="line">    que[tail] = <span class="number">1</span>;</span><br><span class="line">    tail++;</span><br><span class="line">    book[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(head &lt; tail &amp;&amp; tail &lt;= n)&#123;</span><br><span class="line">        cur = que[head];</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(e[cur][i] == <span class="number">1</span> &amp;&amp; book[i] == <span class="number">0</span>)&#123;</span><br><span class="line">                que[tail] = i;</span><br><span class="line">                tail++;</span><br><span class="line">                book[i] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(tail &gt; n) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        head++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt; tail;i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,que[i]);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//找爹且擒贼先擒王</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getf</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (f[v] == v)</span><br><span class="line">		<span class="keyword">return</span> v;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">//路径压缩，每次函数返回的时候，顺带把路上遇到的人的"BOSS"改为最后找到的祖宗编号；</span></span><br><span class="line">		<span class="comment">//提高找祖先的速度。</span></span><br><span class="line">		f[v] = getf(f[v]);</span><br><span class="line">		<span class="keyword">return</span> f[v];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<p><img src="https://s2.ax1x.com/2019/09/22/u9MxRU.png" alt></p>
+<p>深度优先搜索</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> book[<span class="number">101</span>],sum,n,e[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d "</span>,cur);</span><br><span class="line">    sum++;</span><br><span class="line">    <span class="keyword">if</span>(sum == n) <span class="keyword">return</span> ;<span class="comment">//访问所有节点</span></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(e[cur][i] == <span class="number">1</span>&amp;&amp; book[i] == <span class="number">0</span>)&#123;</span><br><span class="line">            book[i] = <span class="number">1</span>;</span><br><span class="line">            dfs(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,m,a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">1</span>;j &lt;= n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i == j) e[i][j] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">else</span> e[i][j] = <span class="number">9999999</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= m;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">        e[a][b] = <span class="number">1</span>;</span><br><span class="line">        e[b][a] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    book[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    dfs(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//合并两子集合的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t1, t2;</span><br><span class="line">	t1 = getf(v);<span class="comment">//t1,t2分别为v和u的最大BOSS</span></span><br><span class="line">	t2 = getf(u);</span><br><span class="line">	<span class="keyword">if</span> (t1 != t2)</span><br><span class="line">		f[t2] = t1;<span class="comment">//靠左原则</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, x, y;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n, &amp;m);<span class="comment">//n是有多少个犯罪个体，m是由多少条描述</span></span><br><span class="line">	init();<span class="comment">//初始化</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;x, &amp;y);</span><br><span class="line">		merge(x, y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//扫描有多少个独立的犯罪团伙</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="keyword">if</span> (f[i] == i)</span><br><span class="line">			sum++;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最终返回的是有多少个独立团伙。</p>
-<p>运行结果：</p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBbwZD.png" alt></p>
-<p>最后结果是3.</p>
-<p>附上今日份的山大月饼，馋你们。<img src="https://s2.ax1x.com/2019/09/12/nBqMlt.jpg" alt></p>
-<p><img src="https://s2.ax1x.com/2019/09/12/nBbIij.jpg" alt></p>
+<p>运行结果如下：</p>
+<p><img src="https://s2.ax1x.com/2019/09/22/u9MTMQ.png" alt></p>
 
       
     </div>
@@ -374,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/10/数据结构实验一——顺序表的相关操作/" rel="next" title="数据结构实验一——顺序表的相关操作">
-                <i class="fa fa-chevron-left"></i> 数据结构实验一——顺序表的相关操作
+              <a href="/2019/09/22/洛谷P1060-开心的金明(背包问题）/" rel="next" title="洛谷P1060-开心的金明(背包问题）">
+                <i class="fa fa-chevron-left"></i> 洛谷P1060-开心的金明(背包问题）
               </a>
             
           </div>
@@ -383,10 +375,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/13/算法与数据结构7-1-最大子列和问题-20-分/" rel="prev" title="算法与数据结构7-1 最大子列和问题 (20 分)">
-                算法与数据结构7-1 最大子列和问题 (20 分) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
