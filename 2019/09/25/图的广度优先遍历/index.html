@@ -89,19 +89,20 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int weight[30],cost[30],f[10000];int money,number;int main()&amp;#123;    cin &amp;gt;&amp;gt; money &amp;gt;&amp;gt; num">
+<meta name="description" content="12345678#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstdlib&amp;gt;using namespace std; const int maxn = 9999999;struct node &amp;#123;	int x, s;&amp;#125;;  12345678910111213141516171819202122">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷P1060-开心的金明(背包问题）">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/洛谷P1060-开心的金明(背包问题）/index.html">
+<meta property="og:title" content="图的广度优先遍历">
+<meta property="og:url" content="http://yoursite.com/2019/09/25/图的广度优先遍历/index.html">
 <meta property="og:site_name" content="superzhaoyang">
-<meta property="og:description" content="12345678910111213141516171819#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int weight[30],cost[30],f[10000];int money,number;int main()&amp;#123;    cin &amp;gt;&amp;gt; money &amp;gt;&amp;gt; num">
+<meta property="og:description" content="12345678#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstdlib&amp;gt;using namespace std; const int maxn = 9999999;struct node &amp;#123;	int x, s;&amp;#125;;  12345678910111213141516171819202122">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/22/upOy24.png">
-<meta property="og:updated_time" content="2019-09-22T08:51:39.840Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/25/ueiIit.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/25/uei4II.jpg">
+<meta property="og:updated_time" content="2019-09-25T13:31:54.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="洛谷P1060-开心的金明(背包问题）">
-<meta name="twitter:description" content="12345678910111213141516171819#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;int weight[30],cost[30],f[10000];int money,number;int main()&amp;#123;    cin &amp;gt;&amp;gt; money &amp;gt;&amp;gt; num">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/22/upOy24.png">
+<meta name="twitter:title" content="图的广度优先遍历">
+<meta name="twitter:description" content="12345678#include&amp;lt;iostream&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstdlib&amp;gt;using namespace std; const int maxn = 9999999;struct node &amp;#123;	int x, s;&amp;#125;;  12345678910111213141516171819202122">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/25/ueiIit.jpg">
 
 
 
@@ -131,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/09/22/洛谷P1060-开心的金明(背包问题）/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/25/图的广度优先遍历/">
 
 
 
 
 
-  <title>洛谷P1060-开心的金明(背包问题） | superzhaoyang</title>
+  <title>图的广度优先遍历 | superzhaoyang</title>
   
 
 
@@ -250,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/洛谷P1060-开心的金明(背包问题）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/25/图的广度优先遍历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="superzhaoyang">
@@ -267,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">洛谷P1060-开心的金明(背包问题）</h1>
+          <h1 class="post-title" itemprop="name headline">图的广度优先遍历</h1>
         
 
         <div class="post-meta">
@@ -279,8 +280,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-22T16:46:44+08:00">
-                2019-09-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-25T21:23:25+08:00">
+                2019-09-25
               </time>
             
 
@@ -317,9 +318,13 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/09/22/upOy24.png" alt></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> weight[<span class="number">30</span>],cost[<span class="number">30</span>],f[<span class="number">10000</span>];</span><br><span class="line"><span class="keyword">int</span> money,number;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; money &gt;&gt; number;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= number;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt;cost[i] &gt;&gt;weight[i];</span><br><span class="line">        weight[i] *= cost[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= number;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = money;j &gt;= cost[i];j--)</span><br><span class="line">            f[j] = max(f[j],f[j - cost[i]] + weight[i]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; f[money] &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><img src="https://s2.ax1x.com/2019/09/25/ueiIit.jpg" alt></p>
+<p><img src="https://s2.ax1x.com/2019/09/25/uei4II.jpg" alt></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">9999999</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> x, s;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">que</span>[2501];</span></span><br><span class="line"><span class="keyword">int</span> e[<span class="number">101</span>][<span class="number">101</span>], book[<span class="number">51</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> head, tail;</span><br><span class="line">	<span class="keyword">int</span> n, m, a,b, cur, start, end, flag = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; start &gt;&gt; end;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (i == j) e[i][j] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span> e[i][j] = maxn;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">		e[a][b] = <span class="number">1</span>;</span><br><span class="line">		e[b][a] = <span class="number">1</span>;<span class="comment">//无向图</span></span><br><span class="line">	&#125;</span><br><span class="line">	head = <span class="number">1</span>;</span><br><span class="line">	tail = <span class="number">1</span>;</span><br><span class="line">	que[head].x = start;</span><br><span class="line">	que[head].s = <span class="number">0</span>;</span><br><span class="line">	tail++;</span><br><span class="line">	book[start] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (head &lt; tail) &#123;</span><br><span class="line">		cur = que[head].x;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (e[cur][j] != maxn &amp;&amp; book[j] == <span class="number">0</span>) &#123;</span><br><span class="line">				que[tail].x = j;</span><br><span class="line">				que[tail].s = que[head].s + <span class="number">1</span>;</span><br><span class="line">				tail++;</span><br><span class="line">				book[j] = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (que[tail - <span class="number">1</span>].s == end) &#123;</span><br><span class="line">				flag = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		head++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, que[tail - <span class="number">1</span>].s); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        本题也可使用深度优先搜索，但是这里使用广度优先搜索会更快。广度优先搜索会更加适用于所有边的 权值相同的情况。</p>
 
       
     </div>
@@ -357,8 +362,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/21/洛谷P1002过河卒/" rel="next" title="洛谷P1002过河卒">
-                <i class="fa fa-chevron-left"></i> 洛谷P1002过河卒
+              <a href="/2019/09/23/洛谷P1036选数/" rel="next" title="洛谷P1036选数">
+                <i class="fa fa-chevron-left"></i> 洛谷P1036选数
               </a>
             
           </div>
@@ -366,10 +371,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/22/深搜广搜遍历图/" rel="prev" title="深搜广搜遍历图">
-                深搜广搜遍历图 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
