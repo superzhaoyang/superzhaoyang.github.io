@@ -9,11 +9,17 @@ const ap = new APlayer({
         url: '/Silver scrapes.mp3',
         cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
       },
+	  {
+        name: "德鲁那酒店",
+        artist: 'Ben（韩国）',
+        url: '/德鲁那酒店.mp3',
+        cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
+      },
       {
         name: "太空",
         artist: '吴青峰',
         url: '/太空.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
+        cover: 'https://s2.ax1x.com/2019/10/19/Kmq4eg.jpg',
       },
       {
         name: 'May i see you again',
