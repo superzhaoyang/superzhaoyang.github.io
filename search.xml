@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>windows通过xrdp链接阿里云服务器Ubuntu</title>
+      <link href="/2020/03/15/windows%E9%80%9A%E8%BF%87xrdp%E9%93%BE%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu/"/>
+      <url>/2020/03/15/windows%E9%80%9A%E8%BF%87xrdp%E9%93%BE%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本地Windows远程桌面连接阿里云Ubuntu 16.04服务器:</p><p>1、目的:希望通过本地的Windows远程桌面连接到阿里云的Ubuntu服务器,通过远程桌面图形界面的方式操作服务器。</p><p>2、条件:申请的阿里云Ubuntu服务器一台,本地Windows操作系统电脑一台。</p><p>3、如何远程桌面连接:</p><p>(1)首先通过Windows系统下连接Linux系统的命令行工具连接Ubuntu服务器,(工具:xshell,securecrt,putty等)。</p><p>(2)通过Windows下工具连接到linux操作系统,之后打开命令窗口,切换到root权限。</p><p>(3)先安装更新:<code>apt-get upate</code>。</p><p>(4)安装xrdp:输入<code>apt-get install xrdp</code>–&gt;回车–&gt;输入”y”–&gt;回车,安装完成。</p><p>   (xrdp: An open source remote desktop protocol(rdp) server)</p><p>(5)安装vnc4server:输入<code>apt-get install vnc4server</code>“–&gt;回车–&gt;输入”y”–&gt;回车,安装完成。</p><p>   (VNC (Virtual Network Console)是虚拟网络控制台的缩写)</p><p>(6)安装xfce4:输入<code>apt-get install xubuntu-desktop&quot;</code>–&gt;回车–&gt;输入”y”–&gt;回车。</p><p>​      –&gt;输入<code>echo &quot;xfce4-session&quot; &gt;~/.xsession</code>–&gt;回车–&gt;输入<code>service xrdp restart</code>–&gt;回车,安装完成。</p><p>​     (Xfce是一个自由软件,运行在类Unix操作系统 (如Linux、FreeBSD 和 Solaris)上,提供轻量级桌面环境。)</p><p>(7)在本地Windows电脑上,使用”窗口键+R”打开”运行对话框”–&gt;输入”mstsc”–&gt;回车–&gt;输入Ubuntu主机的IP地址–&gt;“连接”。</p><p>(8)选择”sesman-Xvnc”–&gt;输入”用户名和密码”–&gt;回车,成功登录到Ubuntu桌面,现在可以进行远程操作了。</p><h3 id="（注意：最新版本的xrdp没有“sesman-Xvnc”这一选项，选择默认的”xorg”链接即可）。"><a href="#（注意：最新版本的xrdp没有“sesman-Xvnc”这一选项，选择默认的”xorg”链接即可）。" class="headerlink" title="（注意：最新版本的xrdp没有“sesman-Xvnc”这一选项，选择默认的”xorg”链接即可）。"></a>（注意：最新版本的xrdp没有“sesman-Xvnc”这一选项，选择默认的”xorg”链接即可）。</h3><p><img alt data-src="https://s1.ax1x.com/2020/03/15/81faod.jpg" class="lazyload"></p><p>然后我们点击<strong>显示选项</strong>，将用户名改为自己Ubuntu上的用户名，我的是root。</p><p>​    <img alt data-src="https://s1.ax1x.com/2020/03/15/81fLTJ.png" class="lazyload"></p><p>如下所示，输入<strong>密码</strong>即可链接远程<code>桌面</code>。</p><p>​    </p><p><img alt data-src="https://s1.ax1x.com/2020/03/15/81h9OO.png" class="lazyload"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 阿里云 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二叉搜索树的相关操作</title>
       <link href="/2019/12/11/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C-1/"/>
       <url>/2019/12/11/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C-1/</url>
