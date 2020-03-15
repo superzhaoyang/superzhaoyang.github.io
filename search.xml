@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>github实用搜索技巧</title>
+      <link href="/2020/03/15/github%E5%AE%9E%E7%94%A8%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/"/>
+      <url>/2020/03/15/github%E5%AE%9E%E7%94%A8%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="搜开发者"><a href="#搜开发者" class="headerlink" title="搜开发者"></a>搜开发者</h2><p>坊间传闻人事招聘开发类员工时，招聘对象在 GitHub 贡献会是重要的参考指标之一。GitHub 作为优秀国产开源软件的集散地之一，埋藏了不少出色的开发者，所以在寻找国产软件的时候，可以尝试先找国内开发者。利用 GitHub 强大的搜索功能，增加几个搜索参数即可轻松找到「目标人物」。</p><p>（注：GitHub 官方还支持很多搜索条件，在 <a href="https://help.github.com/articles/about-searching-on-github/" target="_blank" rel="noopener">这里</a> 可以查看官方出品的搜索技巧。）</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/10/8fff67288a075c18b3ddad2e67b2abbf.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">Github 搜索技巧 - 找开发者</p><p>比如需要寻找国产软件，首先想到的应该是在 GituHub 上找国内开发者，搜索时设置 <code>location</code> 为 China，如果你要寻找使用 javascript 语言开发者，则再增加 <code>language</code> 为 javascript，整个搜索条件就是：<code>language:javascript location:china</code>，从搜索结果来看，我们找到了近 17000 名地区信息填写为 china 的 javascript 开发者，朋友们熟悉的阮一峰老师排在前列。根据官方指引，搜索 GitHub 用户时还支持使用 <code>followers</code>、<code>in:fullname</code> 组合条件进行搜索。</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/08/99cea8df39cd5864874dfa99e4e1799f.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">使用组合条件进行搜索</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/08/1c9064e9f31ac9a19c002825f75daac8.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">搜索条件&lt;language:javascript location:china&gt;</p><h2 id="搜项目"><a href="#搜项目" class="headerlink" title="搜项目"></a>搜项目</h2><p>我们需要在 GitHub 上找到优秀的项目和工具，同样，通过关键字或者设置搜索条件帮助你事半功倍找到好资源。我的使用习惯是先用某些关键词搜索，得到的搜索结果优先展示一些现成的软件和工具。</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/10/6ec59d98e56aaae64475339aaa80f49b.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">GitHub 搜索技巧 - 找项目</p><p><strong>Awesome + 关键字</strong></p><p>Awesome 似乎已经成为不少 GitHub 项目喜爱的命名之一，比如前面提及要找到优秀的 Windows 软件，可以尝试搜索 <code>Awesome windows</code>，得到这样的搜索结果：</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/08/ffba2492882ad53e78c2f71bbadd66f1.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">Awesome windows 搜索结果</p><p>排名前列的结果出现了 <a href="https://github.com/Awesome-Windows/Awesome" target="_blank" rel="noopener">Windows/Awesome 项目</a>，这里集合了 Windows 上优质和精选的最佳应用程序及工具列表。在这里，我收集了这些 Awesome 主题的优秀项目：<a href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener">The awesome manifesto</a>、<a href="https://github.com/vsouza/awesome-ios" target="_blank" rel="noopener">Awesome iOS frameworks</a>、<a href="https://github.com/JStumpp/awesome-android" target="_blank" rel="noopener">Awesome wesome Android libraries and resources</a>。</p><p><strong>设置搜索条件</strong></p><p>如果你明确需要寻找某类特定的项目，比如用某种语言开发、Stars 数量需要达到标准的项目，在搜索框中直接输入搜索条件即可。其中用于发现项目，我的用法是灵活运用下面几个搜索条件：<code>stars:</code>、<code>language:</code>、<code>forks:</code>，其实就是设置项目收藏、开发语言、派生的搜索条件，比如输入 <code>stars:&gt;=500 language:javascript</code>，<a href="https://github.com/search?q=stars%3A>%3D500+language%3Ajavascript" target="_blank" rel="noopener">得到的结果</a> 就是收藏大于和等于 500 的 javascript 项目，排名前列是开源代码库和课程项目 freeCodeCamp、大热门的 Vue 和 React 项目。</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/08/f550f60bb9708166a9ede09432c75a36.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">搜索条件<a href="stars:" target="_blank" rel="noopener">stars:</a>=500 language:javascript&gt;</p><p>如果觉得记住这些搜索条件略显繁琐的话，使用 GitHub 提供的 <a href="https://github.com/search/advanced" target="_blank" rel="noopener">高级搜索功能</a>，同样可用自定义条件进行搜索。或者参考官方给出的帮助指南 <a href="https://help.github.com/articles/searching-on-github/" target="_blank" rel="noopener">Searching on GitHub</a> ，里面有更多关于项目、代码、评论、问题等搜索技巧。</p><p><img alt="img" data-src="https://cdn.sspai.com/2018/08/08/83eeda517d7d3ff0ff493cf008a73f65.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" class="lazyload">GitHub 高级搜索功能</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 实用搜索技巧 </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>windows通过xrdp链接阿里云服务器Ubuntu</title>
       <link href="/2020/03/15/windows%E9%80%9A%E8%BF%87xrdp%E9%93%BE%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu/"/>
       <url>/2020/03/15/windows%E9%80%9A%E8%BF%87xrdp%E9%93%BE%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu/</url>
