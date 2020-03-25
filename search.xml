@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2020/03/25/test/"/>
+      <url>/2020/03/25/test/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RNN网络实战</title>
       <link href="/2020/03/24/RNN%E7%BD%91%E7%BB%9C%E5%AE%9E%E6%88%98/"/>
       <url>/2020/03/24/RNN%E7%BD%91%E7%BB%9C%E5%AE%9E%E6%88%98/</url>
@@ -127,13 +140,13 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> nginx </tag>
             
-            <tag> cgi </tag>
-            
             <tag> fastcgi </tag>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> cgi </tag>
             
         </tags>
       
@@ -290,9 +303,9 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 阿里云 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 阿里云 </tag>
             
         </tags>
       
@@ -359,11 +372,11 @@
       
         <tags>
             
+            <tag> 算法 </tag>
+            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
@@ -382,11 +395,11 @@
       
         <tags>
             
+            <tag> 算法 </tag>
+            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
