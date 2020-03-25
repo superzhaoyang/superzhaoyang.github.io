@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>视频测试</title>
+      <link href="/2020/03/26/%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/"/>
+      <url>/2020/03/26/%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><video src="../../public/video/zuoyi.mp4" width="800px" height="600px" controls="controls"></video>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test</title>
       <link href="/2020/03/26/test/"/>
       <url>/2020/03/26/test/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><video src="../../public/video/zuoyi.mp4" width="800px" height="600px" controls="controls"></video></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><video src="../../public/video/zuoyi.mp4" width="800px" height="600px" controls="controls"></video>]]></content>
       
       
       
@@ -190,9 +203,9 @@
       
         <tags>
             
-            <tag> nginx </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> nginx </tag>
             
             <tag> cgi </tag>
             
@@ -351,9 +364,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> Linux </tag>
             
             <tag> 阿里云 </tag>
             
