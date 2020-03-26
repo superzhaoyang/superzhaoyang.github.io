@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>视频测试</title>
+      <title>嵌入测试</title>
       <link href="/2020/03/26/%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/"/>
       <url>/2020/03/26/%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><video src="./zuoyi.mp4" width="800px" height="600px" controls="controls"></video>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><video src="./zuoyi.mp4" width="800px" height="600px" controls="controls"></video><iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=i0033ml2d53" width="800px" height="600px" allowfullscreen="true"></iframe><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=21311956&auto=1&height=66"></iframe>        <div id="aplayer-wjmLISDt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-wjmLISDt"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "太空",              author: "吴青峰",              url: "./太空.mp3",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>aa</p>]]></content>
       
       
       
