@@ -4,7 +4,47 @@
   
     
     <entry>
-      <title></title>
+      <title>数据结构课设实验一之学生信息管理系统</title>
+      <link href="/2020/03/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E5%AE%9E%E9%AA%8C%E4%B8%80%E4%B9%8B%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <url>/2020/03/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E5%AE%9E%E9%AA%8C%E4%B8%80%E4%B9%8B%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h1><p>（1） 为了模拟专业软件的启动ui，我添加了一个一秒的缓冲界面</p><p>​      （如图所示，打开软件会将弹出一个这样的缓冲界面）</p><p> <img alt="img" data-src="https://s1.ax1x.com/2020/03/29/GETPMV.jpg" class="lazyload"></p><p>（2）主界面</p><p><img alt="主界面" data-src="https://s1.ax1x.com/2020/03/29/GETp2q.png" class="lazyload"></p><p>（3）窗口顶部和底部</p><p> <img alt="窗口美化" data-src="https://s1.ax1x.com/2020/03/29/GEozPs.png" class="lazyload"></p><p>​    为了美化窗口，我将windows传统的窗口顶部栏目隐藏，因为它比较丑陋，但是隐藏之后，我就遇到了新的问题，无法拖动界面，需要重写对鼠标事件对界面的监听，这是一个特殊处理。</p><p>​    底部添加了对考试人数的计算。</p><p>（4）工具栏</p><p><img alt="工具栏" data-src="https://s1.ax1x.com/2020/03/29/GEov5j.png" class="lazyload"></p><p>可以看到有增删改查等功能</p><p><strong>（5）接下来依次验证各项功能</strong></p><p><strong>例如使用模糊查询查询“蔡”，结果如下：</strong></p><p><strong><img alt="模糊查询" data-src="https://s1.ax1x.com/2020/03/29/GETSGn.png" class="lazyload">**</strong>如果不含有这名学生，则会弹出提示窗口：**</p><p><strong><img alt="img" data-src="https://s1.ax1x.com/2020/03/29/GETirT.png" class="lazyload"></strong></p><p><strong>下面来进行精确查询：</strong></p><p><strong>只有打出学生姓名的时候才会出现查阅结果，否则会同上弹出警告</strong></p><p><strong><img alt="精确查询" data-src="https://s1.ax1x.com/2020/03/29/GETFqU.png" class="lazyload"></strong></p><p><strong>接下来展示编辑功能，为了防止用户失误操作，我将表格设置成了不可edit的状态，只有点击工具栏上的编辑功能，才可对表格进行编辑，修改之后，可以点击编辑旁边的保存按钮，保存修改结果。如上图所示，皎月女神性别原来为女，接下来把他的性别改为男。</strong></p><p>​                                                                                         </p><p>​                   <strong><img alt="编辑" data-src="https://s1.ax1x.com/2020/03/29/GETAZF.png" class="lazyload"></strong>         </p><p>我们可以看到，性别被成功修改了。</p><p>（6）添加功能                        </p><p>   此时会出现一个二级页面。</p><p><img alt="添加" data-src="https://s1.ax1x.com/2020/03/29/GETEa4.png" class="lazyload"> </p><p>  点击保存之后，效果如下：</p><p>  ·首先弹出提示窗口</p><p><font size="10" color="purple">（ps:我不写了累死了）</font></p><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://github.com/superzhaoyang/Student-Manage-System" target="_blank" rel="noopener">https://github.com/superzhaoyang/Student-Manage-System</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> QT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>单词的压缩编码</title>
+      <link href="/2020/03/28/%E5%8D%95%E8%AF%8D%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81/"/>
+      <url>/2020/03/28/%E5%8D%95%E8%AF%8D%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>给定一个单词列表，我们将这个列表编码成一个索引字符串 S 与一个索引列表 A。</p><p>例如，如果这个列表是 [“time”, “me”, “bell”]，我们就可以将其表示为 S = “time#bell#” 和 indexes = [0, 2, 5]。</p><p>对于每一个索引，我们可以通过从字符串 S 中索引的位置开始读取字符串，直到 “#” 结束，来恢复我们之前的单词列表。</p><p>那么成功对给定单词列表进行编码的最小字符串长度是多少呢？</p><p>示例：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: words = [&quot;time&quot;, &quot;me&quot;, &quot;bell&quot;]</span><br><span class="line">输出: 10</span><br><span class="line">说明: S = &quot;time#bell#&quot; ， indexes = [0, 2, 5] 。</span><br></pre></td></tr></table></figure><p>提示：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 &lt;= words.length &lt;= 2000</span><br><span class="line">1 &lt;= words[i].length &lt;= 7</span><br><span class="line">每个单词都是小写字母 。</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">minimumLengthEncoding</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; words)</span> </span>&#123;</span><br><span class="line"><span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; good(words.begin(), words.end());</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> word : words) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; word.size(); ++k) &#123;</span><br><span class="line"><span class="comment">//cout &lt;&lt; word.substr(k) &lt;&lt; endl;</span></span><br><span class="line">good.erase(word.substr(k)) ;<span class="comment">//比如time包含me，则删除单词me</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> word : good) &#123;</span><br><span class="line">ans += word.size() + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="built_in">vector</span> &lt;<span class="built_in">string</span> &gt; s = &#123; <span class="string">"time"</span>,<span class="string">"me"</span>,<span class="string">"dell"</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> ans = minimumLengthEncoding(s);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>STL之set</title>
       <link href="/2020/03/28/STL%E4%B9%8Bset/"/>
       <url>/2020/03/28/STL%E4%B9%8Bset/</url>
       
@@ -104,7 +144,7 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 课程设计 </tag>
+            <tag> QT </tag>
             
             <tag> 文档检索器 </tag>
             
@@ -129,7 +169,7 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 课程设计 </tag>
+            <tag> QT </tag>
             
             <tag> 山威地图 </tag>
             
