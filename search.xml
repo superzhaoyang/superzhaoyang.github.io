@@ -4,6 +4,42 @@
   
     
     <entry>
+      <title>Ubuntu18.04配置静态ip的方法</title>
+      <link href="/2020/04/28/Ubuntu18-04%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2020/04/28/Ubuntu18-04%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>​    与Ubuntu 16.04不同，从Ubuntu 17.10 之后，系统便不再支持使用 /etc/network/interfaces的方式来配置静态ip了，需要在 /etc/netplan/xx.yaml 文件修改如下，其中网关设置为用route -n 命令输出的网关。</p><p><img alt data-src="https://s1.ax1x.com/2020/04/28/JIR36I.png" class="lazyload"></p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Let NetworkManager manage all devices on this system</span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br><span class="line">  ethernets:</span><br><span class="line">    ens33:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      dhcp6: no</span><br><span class="line">      addresses: [192.168.136.129/24]</span><br><span class="line">      gateway4: 192.168.136.2</span><br><span class="line">      nameservers:</span><br><span class="line">         addresses: [114.114.114.114,8.8.8.8]</span><br></pre></td></tr></table></figure><p>设置完成后，</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> 静态ip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>过拟合与欠拟合的区别</title>
+      <link href="/2020/04/13/%E8%BF%87%E6%8B%9F%E5%90%88%E4%B8%8E%E6%AC%A0%E6%8B%9F%E5%90%88/"/>
+      <url>/2020/04/13/%E8%BF%87%E6%8B%9F%E5%90%88%E4%B8%8E%E6%AC%A0%E6%8B%9F%E5%90%88/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="欠拟合是指模型在训练集、验证集和测试集上均表现不佳的情况"><a href="#欠拟合是指模型在训练集、验证集和测试集上均表现不佳的情况" class="headerlink" title="欠拟合是指模型在训练集、验证集和测试集上均表现不佳的情况"></a>欠拟合是指模型在训练集、验证集和测试集上均表现不佳的情况</h3><h3 id="过拟合是指模型在训练集上表现很好，到了验证和测试阶段就大不如意了，即模型的泛化能力很差"><a href="#过拟合是指模型在训练集上表现很好，到了验证和测试阶段就大不如意了，即模型的泛化能力很差" class="headerlink" title="过拟合是指模型在训练集上表现很好，到了验证和测试阶段就大不如意了，即模型的泛化能力很差"></a>过拟合是指模型在训练集上表现很好，到了验证和测试阶段就大不如意了，即模型的泛化能力很差</h3><p>欠拟合和过拟合一直是机器学习训练中的难题，在进行模型训练的时候往往要对这二者进行权衡，使得模型不仅在训练集上表现良好，在验证集以及测试集上也要有出色的预测能力。</p><p>解决欠拟合(高偏差)的方法<br>1.模型复杂化<br>对同一个算法复杂化。例如回归模型添加更多的高次项，增加决策树的深度，增加神经网络的隐藏层数和隐藏单元数等<br>弃用原来的算法，使用一个更加复杂的算法或模型。例如用神经网络来替代线性回归，用随机森林来代替决策树等<br>2.增加更多的特征，使输入数据具有更强的表达能力<br>特征挖掘十分重要，尤其是具有强表达能力的特征，往往可以抵过大量的弱表达能力的特征<br>特征的数量往往并非重点，质量才是，总之强特最重要<br>能否挖掘出强特，还在于对数据本身以及具体应用场景的深刻理解，往往依赖于经验<br>3.调整参数和超参数<br>超参数包括：<br>神经网络中：学习率、学习衰减率、隐藏层数、隐藏层的单元数、Adam优化算法中的β1和β2参数、batch_size数值等<br>其他算法中：随机森林的树数量，k-means中的cluster数，正则化参数λ等<br>4.增加训练数据往往没有用<br>欠拟合本来就是模型的学习能力不足，增加再多的数据给它训练它也没能力学习好<br>5.降低正则化约束<br>正则化约束是为了防止模型过拟合，如果模型压根不存在过拟合而是欠拟合了，那么就考虑是否降低正则化参数λ或者直接去除正则化项<br>解决过拟合(高方差)的方法<br>1.增加训练数据数<br>发生过拟合最常见的现象就是数据量太少而模型太复杂<br>过拟合是由于模型学习到了数据的一些噪声特征导致，增加训练数据的量能够减少噪声的影响，让模型更多地学习数据的一般特征<br>增加数据量有时可能不是那么容易，需要花费一定的时间和精力去搜集处理数据<br>利用现有数据进行扩充或许也是一个好办法。例如在图像识别中，如果没有足够的图片训练，可以把已有的图片进行旋转，拉伸，镜像，对称等，这样就可以把数据量扩大好几倍而不需要额外补充数据<br>注意保证训练数据的分布和测试数据的分布要保持一致，二者要是分布完全不同，那模型预测真可谓是对牛弹琴了<br>2.使用正则化约束<br>在代价函数后面添加正则化项，可以避免训练出来的参数过大从而使模型过拟合。使用正则化缓解过拟合的手段广泛应用，不论是在线性回归还是在神经网络的梯度下降计算过程中，都应用到了正则化的方法。常用的正则化有l1正则和l2正则，具体使用哪个视具体情况而定，一般l2正则应用比较多<br>3.减少特征数<br>欠拟合需要增加特征数，那么过拟合自然就要减少特征数。去除那些非共性特征，可以提高模型的泛化能力<br>4.调整参数和超参数<br>不论什么情况，调参是必须的<br>5.降低模型的复杂度<br>欠拟合要增加模型的复杂度，那么过拟合正好反过来<br>6.使用Dropout<br>这一方法只适用于神经网络中，即按一定的比例去除隐藏层的神经单元，使神经网络的结构简单化<br>7.提前结束训练<br>即early stopping，在模型迭代训练时候记录训练精度(或损失)和验证精度(或损失)，倘若模型训练的效果不再提高，比如训练误差一直在降低但是验证误差却不再降低甚至上升，这时候便可以结束模型训练了</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>豆瓣电影助手</title>
       <link href="/2020/03/31/%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E5%8A%A9%E6%89%8B/"/>
       <url>/2020/03/31/%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E5%8A%A9%E6%89%8B/</url>
@@ -60,9 +96,9 @@
             
             <tag> STL </tag>
             
-            <tag> c++ </tag>
-            
             <tag> set </tag>
+            
+            <tag> c++ </tag>
             
         </tags>
       
@@ -83,9 +119,9 @@
             
             <tag> STL </tag>
             
-            <tag> string </tag>
-            
             <tag> c++ </tag>
+            
+            <tag> string </tag>
             
         </tags>
       
@@ -355,11 +391,11 @@
       
         <tags>
             
-            <tag> nginx </tag>
-            
             <tag> Linux </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> nginx </tag>
             
         </tags>
       
@@ -401,11 +437,11 @@
       
         <tags>
             
-            <tag> nginx </tag>
-            
             <tag> Linux </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> nginx </tag>
             
         </tags>
       
@@ -470,9 +506,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 服务器 </tag>
             
             <tag> 阿里云 </tag>
             
@@ -541,11 +577,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -564,11 +600,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
