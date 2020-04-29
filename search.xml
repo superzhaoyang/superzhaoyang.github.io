@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2020/04/29/test/"/>
+      <url>/2020/04/29/test/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ubuntu18.04配置静态ip的方法</title>
       <link href="/2020/04/28/Ubuntu18-04%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2020/04/28/Ubuntu18-04%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip%E7%9A%84%E6%96%B9%E6%B3%95/</url>
@@ -345,13 +358,13 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> nginx </tag>
             
-            <tag> cgi </tag>
-            
             <tag> fastcgi </tag>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> cgi </tag>
             
         </tags>
       
@@ -577,11 +590,11 @@
       
         <tags>
             
+            <tag> 算法 </tag>
+            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
@@ -600,11 +613,11 @@
       
         <tags>
             
+            <tag> 算法 </tag>
+            
             <tag> 洛谷 </tag>
             
             <tag> 深度优先搜索 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
