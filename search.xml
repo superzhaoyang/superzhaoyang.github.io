@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>YunDisk</title>
+      <link href="/2020/05/09/YunDisk/"/>
+      <url>/2020/05/09/YunDisk/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="一-项目技术"><a href="#一-项目技术" class="headerlink" title="一.项目技术"></a>一.项目技术</h3><ul><li><p>nginx</p></li><li><p>fastdfs分布式文件系统</p></li><li><p>fastcgi公共网关接口</p></li><li><p>Redis key-value数据库</p></li><li><p>Mysql 数据库</p></li><li><p>Qt</p></li><li><p>项目逻辑</p><p><img alt data-src="https://s1.ax1x.com/2020/05/09/YQfoiq.png" class="lazyload"></p></li></ul><h3 id="二-项目展示"><a href="#二-项目展示" class="headerlink" title="二.项目展示"></a>二.项目展示</h3><p>2.1 注册和登陆</p><p>  <img alt data-src="https://s1.ax1x.com/2020/05/09/YQRUfK.png" class="lazyload"></p><p>2.2 用户文件列表</p><p> <img alt data-src="https://s1.ax1x.com/2020/05/09/YQRNY6.png" class="lazyload"></p><p>2.3 文件共享</p><p> <img alt data-src="https://s1.ax1x.com/2020/05/09/YQRtFx.png" class="lazyload"></p><p>2.4 传输列表</p><p>  <img alt data-src="https://s1.ax1x.com/2020/05/09/YQRJT1.png" class="lazyload"></p><p>2.5 文件下载</p><p><img alt data-src="https://s1.ax1x.com/2020/05/09/YQRGwR.png" class="lazyload"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DQN-FlappyBird</title>
       <link href="/2020/05/09/DQN-FlappyBird/"/>
       <url>/2020/05/09/DQN-FlappyBird/</url>
