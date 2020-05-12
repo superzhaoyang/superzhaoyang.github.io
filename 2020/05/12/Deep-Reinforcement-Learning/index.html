@@ -72,9 +72,9 @@ function activateLightMode(){
 <p>​     环境：环境是无法被主体直接操控的，但可以被主体的动作改变，例如超级码力中可以才踩蘑菇，alphago的围棋落子，占据棋盘。</p>
 <p>​     动作： 主体对环境实施的影响，在我们的游戏中，就是选择向上飞或者向下飞。</p>
 <p>​     奖励： 执行动作后，环境对主体的反馈。例如撞到柱子-1分，通过柱子+1分。</p>
-<p>​     策略：用什么养的方式来让reward尽量达到最大。比如我们选用的Epsilon策略。</p>
+<p>​     策略：用什么样的方式来让reward尽量达到最大。比如我们选用的Epsilon策略。</p>
 <h3 id="1-2-强化学习的特点"><a href="#1-2-强化学习的特点" class="headerlink" title="1.2 强化学习的特点"></a>1.2 强化学习的特点</h3><ul>
-<li>做中学。我无法将主体的行为明显地区分为学和做两部分，这和传统的机器学习方法不一样。传统的机器学习方法都是分成训练过程和测试过程。而强化学习不同，它必须一边学一边行动。</li>
+<li>做中学。我们无法将主体的行为明显地区分为学和做两部分，这和传统的机器学习方法不一样。传统的机器学习方法都是分成训练过程和测试过程。而强化学习不同，它必须一边学一边行动。</li>
 <li>综合考虑与平衡短期回报和长期回报。这是因为我们的系统不一定存在及时的反馈。很多时候，主体做出一个动作并不知道好不好，只有当一系列动作执行完毕之后，主体才发现原来自己踩到了一颗地雷，从而学习到这一些列过程都是错误的。当然也存在一些相反的情况，例如虽然主体可能通过一系列动作暂时得到不错的回报，但是从更长期的角度来看，主体收到的punish远大于reward。这就是所谓的短期回报和长期回报的平衡，在下棋游戏中，这种平衡的重要性被体现的淋漓尽致。</li>
 </ul>
 <p>正是因为有了这两个特点或者难点，强化学习比一般的机器学习算法要困难得多。</p>
@@ -89,10 +89,10 @@ function activateLightMode(){
 <h5 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h5><h3 id="3-模拟行动"><a href="#3-模拟行动" class="headerlink" title="3.模拟行动"></a>3.模拟行动</h3><p><img alt data-src="https://s1.ax1x.com/2020/05/12/YUtVat.png" class="lazyload"></p>
 <p><img alt data-src="https://s1.ax1x.com/2020/05/12/YUNg7n.png" class="lazyload"></p>
 <p><img alt data-src="https://s1.ax1x.com/2020/05/12/YUtZIP.png" class="lazyload"></p>
-<h3 id="4-最终的Q表"><a href="#4-最终的Q表" class="headerlink" title="4.最终的Q表"></a>4.最终的Q表</h3><p><img alt data-src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1589295738170.png" class="lazyload"></p>
+<h3 id="4-最终的Q表"><a href="#4-最终的Q表" class="headerlink" title="4.最终的Q表"></a>4.最终的Q表</h3><p><img alt data-src="https://s1.ax1x.com/2020/05/12/YUtnG8.png" class="lazyload"></p>
 <h2 id="二-Flappy-Bird中的DQN架构"><a href="#二-Flappy-Bird中的DQN架构" class="headerlink" title="二.Flappy Bird中的DQN架构"></a>二.Flappy Bird中的DQN架构</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先我们要明确系统架构，该神经网络的输入时基于PyGame实现的Flappy Bird的画面，输出是游戏中，小鸟的动作所对应的Q函数。具体来讲，因为小鸟的动作只有向上和向下两种。所以，output的值就是向上和向下对应的Q值。</p>
 <p>&nbsp;      我们采用的是当前t时刻的连续四帧画面作为网络的输入。整个网络采取了一个卷积神经网络的架构，它的输入是一个四通道，80*80大小的图像，不同的通道对应了不同帧的时间步骤画面。</p>
-<p><img alt data-src="https://s1.ax1x.com/2020/05/12/YUapGV.png" class="lazyload"></p>
+<p><img alt data-src="https://s1.ax1x.com/2020/05/12/YU0ree.png" class="lazyload"></p>
 <h2 id="三-程序的运行"><a href="#三-程序的运行" class="headerlink" title="三.程序的运行"></a>三.程序的运行</h2><p>​     首先，每个周期主体都会将最近四个周期的游戏画面S输入到DQN神经网络中，并输出两个Q值，分别对应主体选择向上运动和向下运动的估值。之后，主体会在，这两个Q值中选择最大的一个，并采取响应的行动。</p>
 <p>​      由于开始模型的能力很差，所以主体会以每个周期Epsilon的概率随机选择一个动作，而更多的时候则按照神经网络的结果行动。这里的Epsilon是一个概率值，它会从早期的INITIAL_EPSILON一点点地减少到FINAL_EPSILON，减少的速率基本上是超参数EXPLORE的倒数，也就是说，主体在早期会经历一段野蛮的探索期，较多地选取随机行动。探索期结束后，他才会最大概率地按照神经网络的指挥行动。这种方案被成为Epsilon贪婪策略。</p>
 <p>​      接下来，主体会将前四帧画面s，后四帧画面s’,这一次采取的行动a,游戏给的回报r和游戏是否结束t记录下来形成一个五元组D（s,a,r,s’,T)，D的数据类型为deque(双端队列）。其中，T是布尔值。D具有存储容量的限制，由超参数REPLAY_MEMORY限定，当D中存储的五元组的数据超过这个值的时候，会进行POP_LEFT操作，即删除组老的一个五元组。</p>
